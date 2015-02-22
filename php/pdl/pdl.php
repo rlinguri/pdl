@@ -7,7 +7,49 @@
  * Licensed under MIT (https://github.com/rlinguri/pdlo/blob/master/LICENSE)
  */
 
-/*** PDL FRAMEWORK LINKS ***/
+/*** PDL ABSTRACT CLASSES AND FRAMEWORK LINKS ***/
+
+class PDLObject
+{
+
+	public function __construct() {
+	
+	}
+
+}
+
+class PDLModel
+{
+
+	public function __construct() {
+	
+		parent::__construct();
+	
+	}
+
+}
+
+class PDLView
+{
+
+	public function __construct() {
+	
+		parent::__construct();
+	
+	}
+
+}
+
+class PDLController
+{
+
+	public function __construct() {
+	
+		parent::__construct();
+	
+	}
+
+}
 
 require_once('php/pdl/database.php');
 

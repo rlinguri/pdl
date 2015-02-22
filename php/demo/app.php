@@ -20,7 +20,16 @@ require_once('php/pdl/pdl.php');
 class AppController
 {
 
+	private $model;
+	private $view;
 
+	public function __construct() {
+	
+		$this->model = new AppModel;
+		
+		$this->view = new AppView($this->model);
+	
+	}
 
 }
 
