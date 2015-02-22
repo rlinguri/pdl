@@ -25,15 +25,15 @@ class AppController
 
 	public function __construct() {
 	
-		/** BEGIN TEST ELEMENT **/
+		/** BEGIN TEST LAYOUT **/
 		
-		$emo = new PDLElementModel;
+		$obj = new PDLLayoutModel;
 				
-		$emo->setPropertiesWithId(2);
+		$obj->setPropertiesWithId(2);
 		
-		print_r($emo);
+		print_r($obj);
 		
-		/** END TEST DATABASE **/
+		/** END TEST LAYOUT **/
 
 		$this->model = new AppModel;
 		
