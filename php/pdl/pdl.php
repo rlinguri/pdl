@@ -7,9 +7,7 @@
  * Licensed under MIT (https://github.com/rlinguri/pdlo/blob/master/LICENSE)
  */
 
-/*** APPLICATION BOOTSTRAPPER ***/
+/*** PDL FRAMEWORK LINKS ***/
 
-require_once('php/demo/app.php');
-
-$app = new AppController;
+require_once('php/pdl/database.php');
 
