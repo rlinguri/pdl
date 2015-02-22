@@ -9,7 +9,7 @@
 
 /*** DATABASE CLASSES ***/
 
-PDLDatabase extends PDLObject
+class PDLDatabase extends PDLObject
 {
 
 	private static $dbs;
@@ -66,6 +66,39 @@ PDLDatabase extends PDLObject
 		return $this->pdo;
 		
 	} // ./pdo
+
+	/**
+	* @method: fetchMany
+	* @descr:  statically returns a result from this connection
+	* @param:  string (SQL)
+	* @return: simple array of assoc arrays (database records)
+	*/
+	public function fetchMany($sql) {
+	
+		$sth = $this->pdo->prepare($sql);
+		
+		$sth->execute();
+		
+		return $sth->fetchAll(PDO::FETCH_ASSOC);
+		
+	} // ./fetchMany
+	
+	/**
+	* @method: fetchOne
+	* @descr:  statically returns a result from this connection
+	* @param:  string (SQL)
+	* @return: assoc array (database record)
+	*/
+	public function fetchOne($sql) {
+	
+		$sth = $this->pdo->prepare($sql);
+		
+		$sth->execute();
+		
+		return $sth->fetch(PDO::FETCH_ASSOC);
+		
+	} // ./fetchMany
+	
 
 } // ./class
 

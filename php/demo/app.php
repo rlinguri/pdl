@@ -25,6 +25,16 @@ class AppController
 
 	public function __construct() {
 	
+		/** BEGIN TEST DATABASE **/
+		
+		$dbs = PDLDatabase::dbs();
+				
+		$arr = $dbs->fetchMany('SELECT * FROM layout');
+		
+		print_r($arr);
+		
+		/** END TEST DATABASE **/
+
 		$this->model = new AppModel;
 		
 		$this->view = new AppView($this->model);
