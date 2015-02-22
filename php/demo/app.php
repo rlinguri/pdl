@@ -25,15 +25,15 @@ class AppController
 
 	public function __construct() {
 	
-		/** BEGIN TEST LAYOUT **/
+		/** BEGIN TEST STRUCTURE **/
 		
-		$obj = new PDLLayoutModel;
+		$obj = new PDLStructureModel;
 				
 		$obj->setPropertiesWithId(2);
 		
 		print_r($obj);
 		
-		/** END TEST LAYOUT **/
+		/** END TEST STRUCTURE **/
 
 		$this->model = new AppModel;
 		

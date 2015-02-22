@@ -110,4 +110,5 @@ class PDLController extends PDLObject
 require_once('php/pdl/database.php');
 require_once('php/pdl/element.php');
 require_once('php/pdl/layout.php');
+require_once('php/pdl/structure.php');
 
