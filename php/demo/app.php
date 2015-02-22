@@ -25,13 +25,13 @@ class AppController
 
 	public function __construct() {
 	
-		/** BEGIN TEST DATABASE **/
+		/** BEGIN TEST ELEMENT **/
 		
-		$dbs = PDLDatabase::dbs();
+		$emo = new PDLElementModel;
 				
-		$arr = $dbs->fetchMany('SELECT * FROM layout');
+		$emo->setPropertiesWithId(2);
 		
-		print_r($arr);
+		print_r($emo);
 		
 		/** END TEST DATABASE **/
 
